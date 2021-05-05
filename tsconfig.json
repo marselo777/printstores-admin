@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,9 +16,16 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
+    "paths": {
+      "@printstores-ui": ["./src/ui"],
+      "@printstores-ui/*": ["./src/ui/*"],
+      "@printstores-components": ["./src/components"],
+      "@printstores-components/*": ["./src/components/*"],
+      "@printstores-api": ["./src/api"],
+      "@printstores-api/*": ["./src/api/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
