@@ -1,6 +1,7 @@
 import { Form, Input, Checkbox } from "antd";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { Button } from "@printstores-components";
+import { Button } from "src/components";
 
 const layout = {
   labelCol: { span: 8 },

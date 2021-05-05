@@ -17,15 +17,7 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "baseUrl": ".",
-    "paths": {
-      "@printstores-ui": ["./src/ui"],
-      "@printstores-ui/*": ["./src/ui/*"],
-      "@printstores-components": ["./src/components"],
-      "@printstores-components/*": ["./src/components/*"],
-      "@printstores-api": ["./src/api"],
-      "@printstores-api/*": ["./src/api/*"]
-    }
+    "baseUrl": "."
   },
   "include": ["src"]
 }

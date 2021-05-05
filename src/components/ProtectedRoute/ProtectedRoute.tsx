@@ -1,15 +1,15 @@
 import React from "react";
-import { RouteProps } from "react-router";
-import { navigate, Redirect } from "@reach/router";
+import { Redirect, RouteComponentProps } from "@reach/router";
 
-interface Props extends RouteProps {
-  component: React.FunctionComponent<any>;
+interface Props extends RouteComponentProps {
+  component?: React.FunctionComponent<any>;
+  children: React.ReactNode;
 }
 
-export const ProtectedRoute = ({ component: Component, ...rest }: Props) => {
-  const auth = false;
+export const ProtectedRoute = ({ component: Component, children, ...rest }: Props) => {
+  const auth = true;
   if (!auth) {
     return <Redirect to="/login" noThrow />;
   }
-  return <Component {...rest} />;
+  return <>{children}</>;
 };
